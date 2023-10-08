@@ -3,21 +3,26 @@ Console.WriteLine("Let's play Rock-Paper_Scissors!");
 
 while (true)
 {
+    string? firstPlayerSign;
+    do
+    {
+        Console.WriteLine("Provide sign, first player (or write 'quit' to end game):");
 
-
-
-    Console.WriteLine("Provide sign, first player (or write 'quit' to end game):");
-
-    string? firstPlayerSign = Console.ReadLine();
-
+        firstPlayerSign = Console.ReadLine();
+        
+    } while (firstPlayerSign != "rock" && firstPlayerSign != "paper" && firstPlayerSign != "scissors" );
     if (firstPlayerSign == "quit")
     {
         break;
     }
-
+string? secondPlayerSign;
+do 
+{
     Console.WriteLine("Provide sign, second player (or write 'quit' to end game):");
 
-    string? secondPlayerSign = Console.ReadLine();
+    secondPlayerSign = Console.ReadLine();
+
+} while (secondPlayerSign != "rock" && secondPlayerSign != "paper" && secondPlayerSign != "scissors" );
 
     if (secondPlayerSign == "quit")
     {
