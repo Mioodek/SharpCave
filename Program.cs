@@ -1,40 +1,55 @@
 ﻿
 Console.WriteLine("Let's play Rock-Paper_Scissors!");
 
-
-Console.WriteLine("Provide sign, first player:");
-
-string? firstPlayerSign = Console.ReadLine(); 
-
-Console.WriteLine("Provide sign, second player:");
-
-string? secondPlayerSign = Console.ReadLine(); 
-
-if (firstPlayerSign == secondPlayerSign)
+while (true)
 {
-    Console.WriteLine("It's a draw.");
-}
 
-else if(firstPlayerSign == "rock" && secondPlayerSign == "scissors")
-{
-    Console.WriteLine("First player won!");
-}
 
-else if(firstPlayerSign == "paper" && secondPlayerSign == "rock")
-{
-    Console.WriteLine("First player won!");
-}
 
-else if(firstPlayerSign == "scissors" && secondPlayerSign == "paper")
-{
-    Console.WriteLine("First player won!");
-}
+    Console.WriteLine("Provide sign, first player (or write 'quit' to end game):");
 
-else 
-{
-    Console.WriteLine("Second player won!");
+    string? firstPlayerSign = Console.ReadLine();
+
+    if (firstPlayerSign == "quit")
+    {
+        break;
+    }
+
+    Console.WriteLine("Provide sign, second player (or write 'quit' to end game):");
+
+    string? secondPlayerSign = Console.ReadLine();
+
+    if (secondPlayerSign == "quit")
+    {
+        break;
+    }
+
+    if (firstPlayerSign == secondPlayerSign)
+    {
+        Console.WriteLine("It's a draw.");
+    }
+
+    else if (firstPlayerSign == "rock" && secondPlayerSign == "scissors")
+    {
+        Console.WriteLine("First player won!");
+    }
+
+    else if (firstPlayerSign == "paper" && secondPlayerSign == "rock")
+    {
+        Console.WriteLine("First player won!");
+    }
+
+    else if (firstPlayerSign == "scissors" && secondPlayerSign == "paper")
+    {
+        Console.WriteLine("First player won!");
+    }
+
+    else
+    {
+        Console.WriteLine("Second player won!");
+    }
+
 }
- 
 
 Console.WriteLine("Press Enter to close the game...");
 Console.ReadLine();
